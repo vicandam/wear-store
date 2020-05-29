@@ -1,0 +1,72 @@
+/* your styles go here */
+ 
+.photo-container input[type="file"] {
+    padding:0px; 
+    margin:0px; 
+    padding:23px; 
+    border:1px solid #d6d6d6;
+}
+
+.delete-container {
+    color:red;
+}
+.edit-container {
+    color:green;
+}
+
+
+
+/* for receite */
+
+.receipt-table-left {
+    width:100%
+/*    border:1px solid green;*/
+/*    border:1px solid yellow;   */
+}
+ 
+.receipt-table-left td, .receipt-table-left th 
+{
+    border:1px solid black; 
+}
+
+
+.receipt-table-left td:nth-child(1) { 
+  width:20px
+}  
+.receipt-table-left td:nth-child(2) { 
+  width:400px
+}  
+
+.receipt-table-left td:nth-child(3) { 
+  width:300px
+}  
+ 
+ 
+.receipt-table-left td { 
+    padding:9px;
+}  
+
+.receipt-table-left th, .receipt-table-right th {
+    padding:10px;
+}
+
+.receipt-table-right {
+    margin-left:-30px; 
+    margin-top:0px;
+    width:224px
+}
+ .receipt-table-right th {
+    border: 1px solid black;
+     border-left:none;
+}
+ .receipt-table-right td {
+    border: 1px solid black;
+     border-left:none;
+     border-bottom: none;
+}
+
+
+
+.inventory-customize-field-container {
+    border:1px solid #e2e2e2; padding:10px 0px 0px 10px
+}

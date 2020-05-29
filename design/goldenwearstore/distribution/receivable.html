@@ -1,0 +1,421 @@
+<!--  
+    This page is for the list of items 
+
+    - Able to edit and redirect to other page 
+        - Note: when you edit item, all current ordered will be changed.
+
+    - Able to delete item
+        - It will remove the image 
+        - It will remove all the history transaction and all the records in the database 
+-->
+ 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="css/fontastic.css">
+    <!-- Google fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!-- jQuery Circle-->
+    <link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css">
+    <!-- Custom Scrollbar-->
+    <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- Side Navbar -->
+    <nav class="side-navbar">
+      <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header d-flex align-items-center justify-content-center">
+          <!-- User Info-->
+          <div class="sidenav-header-inner text-center"><img src="img/avatar-7.jpg" alt="person" class="img-fluid rounded-circle">
+            <h2 class="h5">Nathan Andrews</h2><span>Web Developer</span>
+          </div>
+          <!-- Small Brand information, appears on minimized sidebar-->
+          <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">D</strong></a></div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+          <h5 class="sidenav-heading">Main</h5>
+          <ul id="side-main-menu" class="side-menu list-unstyled">                  
+            <li><a href="index.html"> <i class="icon-home"></i>Home                             </a></li>
+            <li><a href="forms.html"> <i class="icon-form"></i>Forms                             </a></li>
+            <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts                             </a></li>
+            <li class="active"><a href="tables.html"> <i class="icon-grid"></i>Tables                             </a></li>
+            <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Example dropdown </a>
+              <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Page</a></li>
+              </ul>
+            </li>
+            <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page                             </a></li>
+            <li> <a href="#"> <i class="icon-mail"></i>Demo
+                <div class="badge badge-warning">6 New</div></a></li>
+          </ul>
+        </div>
+        <div class="admin-menu">
+          <h5 class="sidenav-heading">Second menu</h5>
+          <ul id="side-admin-menu" class="side-menu list-unstyled"> 
+            <li> <a href="#"> <i class="icon-screen"> </i>Demo</a></li>
+            <li> <a href="#"> <i class="icon-flask"> </i>Demo
+                <div class="badge badge-info">Special</div></a></li>
+            <li> <a href=""> <i class="icon-flask"> </i>Demo</a></li>
+            <li> <a href=""> <i class="icon-picture"> </i>Demo</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page">
+      <!-- navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                  <div class="brand-text d-none d-md-inline-block"><span>Bootstrap </span><strong class="text-primary">Dashboard</strong></div></a></div>
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Notifications dropdown-->
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-upload"></i>Server Rebooted</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification d-flex justify-content-between">
+                          <div class="notification-content"><i class="fa fa-twitter"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-bell"></i>view all notifications                                            </strong></a></li>
+                  </ul>
+                </li>
+                <!-- Messages dropdown-->
+                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-info">10</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Jason Doe</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Frank Williams</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Ashley Wood</h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-envelope"></i>Read all messages    </strong></a></li>
+                  </ul>
+                </li>
+                <!-- Languages dropdown    -->
+                <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
+                  <ul aria-labelledby="languages" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="img/flags/16/FR.png" alt="English" class="mr-2"><span>French                                                         </span></a></li>
+                  </ul>
+                </li>
+                <!-- Log out-->
+                <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Breadcrumb-->
+      <div class="breadcrumb-holder">
+        <div class="container-fluid">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Tables       </li>
+          </ul>
+        </div>
+      </div>
+      <section>
+        <div class="container-fluid">
+          <!-- Page Header-->
+          <header> 
+              <h1 class="h3 display">Date Range</h1> 
+              <form method="GET">
+                  
+                  
+                  <div class="row">
+                      <div class="col-md-6"> 
+                           <div class="form-group">
+                            <select name="category" class="form-control">
+                              <option>Daily</option>
+                              <option>Weekly</option>
+                              <option>Monthly</option> 
+                              <option>Yearly</option>
+                            </select>  
+                          </div>
+                           
+                          <div class="form-group"> 
+                              <label> Day</label>
+                              <input type="date" name="date" class="form-control"> <br>                                  
+                          </div>
+                          
+                          <div class="form-group"> 
+                              <label> Week</label>
+                             <input type="week" name="date" class="form-control" > <br>                                 
+                          </div>
+                            
+                          <div class="form-group"> 
+                              <label> Month</label>
+                             <input type="month" name="date" class="form-control" > <br>                             
+                          </div>    
+                            
+                      </div> 
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input type="text" name="search" placeholder="Search" class="pull-right form-control"> 
+                          </div> 
+                      </div>   
+                      <div class="col-md-6">
+                          
+                          <div  class="inventory-customize-field-container"> 
+                          <h4> Optional Fields</h4>
+                          
+                              
+                              
+                     
+                              
+                              
+                              
+                              
+                          <div class="form-group row"> 
+                              <div class="col-sm-10">
+                                <div class="i-checks">
+                                  <input id="checkboxCustom1" type="checkbox" name="dealer_name" value="" class="form-control-custom">
+                                  <label for="checkboxCustom1">Dealer Name</label>
+                                </div>
+                                  
+                                <div class="i-checks">
+                                  <input id="checkboxCustom2" type="checkbox" name="dealer_grou_recruiter" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom2">Dealer Group / Recruiter</label>
+                                </div> 
+                                  
+                                <div class="i-checks">
+                                  <input id="checkboxCustom3" type="checkbox" name="category" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom3">Category</label>
+                                </div>
+                        
+                                <div class="i-checks">
+                                  <input id="checkboxCustom4" type="checkbox" name="item_name" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom4">Item Name</label>
+                                </div>  
+                                  
+                                <div class="i-checks">
+                                  <input id="checkboxCustom5" type="checkbox" name="tra_number" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom5">TRA #</label>
+                                </div>       
+                                     
+                               
+                              </div>
+                            </div> 
+                     </div>
+                      </div> 
+                      <div class="col-md-6">
+                          
+                          <div class="inventory-customize-field-container"> 
+                          <h4> Optional Fields</h4>
+                          
+                          <div class="form-group row"> 
+                              <div class="col-sm-10">
+                                 <div class="i-checks">
+                                  <input id="checkboxCustom5" type="checkbox" name="gross_selling_price" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom5">Gross Selling Price</label>
+                                </div>       
+                                <div class="i-checks">
+                                  <input id="checkboxCustom5" type="checkbox" name="dealer_discount" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom5">Dealer Discount</label>
+                                </div>       
+                                <div class="i-checks">
+                                  <input id="checkboxCustom5" type="checkbox" name="store_profit" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom5">Store Profit</label>
+                                </div>       
+                                <div class="i-checks">
+                                  <input id="checkboxCustom5" type="checkbox" name="net_amount" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom5">Net Amount</label>
+                                </div>       
+                                <div class="i-checks">
+                                  <input id="checkboxCustom5" type="checkbox" name="cash_payment" value="" checked="" class="form-control-custom">
+                                  <label for="checkboxCustom5">Cash Payment</label>
+                                </div>
+                                   
+                              </div>
+                            </div> 
+                              </div>
+                      </div>
+                  </div>
+                  
+                  <div class="row" style="margin-top:10px" >
+                       <div class="col-md-6">  
+                           <div class="form-group"  >
+                                <button type="submit" class="btn btn-success" > Search </button>
+                           </div>
+                      </div>  
+                  </div>
+                    
+                  
+              </form>
+          </header>
+           
+          <div class="row">  
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Receivables</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th>Dealer Name</th>
+                          <th>Dealer Group / Recruiter</th>
+                          <th>Category</th> 
+                          <th>Item Name</th> 
+                          <th>TRA #</th> 
+                          <th>Gross Selling Price</th>
+                          <th>Dealer Discount</th>
+                          <th>Store Profit</th>
+                          <th>Net Amount</th>
+                          <th>Cash Payment</th>
+                          <th>Credit Limit</th>
+                          <th>Credit Limit Available</th>
+                        </tr>
+                      </thead>
+                      <tbody>  
+                        <tr>
+                          <th scope="row">Jesus Erwin Suarez</th>
+                          <td>
+                              Addidas Group
+                          </td>
+                          <td> 
+                              Avon
+                            </td>
+                            <td> 
+                                Soap and cloths
+                            </td>  
+                            <td> 
+                              234
+                            </td>  
+                          <td> 
+                                Php 2,000
+                          </td>    
+                            <td> 
+                                Php 2,000
+                          </td> 
+                            <td> 
+                                Php 2,000
+                          </td>  
+                        
+                          <td>  
+                              Php 10,000
+                          </td>
+                             
+                          <td>  
+                              Php 30,000
+                          </td>      
+                          <td>  
+                              Php 30,000
+                          </td>      
+                          <td>  
+                              Php 20,000
+                          </td> 
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                    
+                    <div style="margin-top:10px">
+                        <div class="form-group pull-right" >  
+                            <button type="button" class="btn-info btn" >Generate Excel</button>
+                        </div>
+
+                        <div class="form-group"  >    
+                            <nav aria-label="...">
+                              <ul class="pagination">
+                                <li class="page-item disabled">
+                                  <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active">
+                                  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                  <a class="page-link" href="#">Next</a>
+                                </li>
+                              </ul>
+                            </nav> 
+                        </div>
+                    </div> 
+                </div>
+              </div>
+            </div> 
+          </div>  
+        </div>
+      </section>
+      <footer class="main-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Your company &copy; 2017-2019</p>
+            </div>
+            <div class="col-sm-6 text-right">
+              <p>Design by <a href="https://bootstrapious.com" class="external">Bootstrapious</a></p>
+              <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/grasp_mobile_progress_circle-1.0.0.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Main File-->
+    <script src="js/front.js"></script>
+  </body>
+</html>
